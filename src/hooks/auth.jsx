@@ -36,7 +36,7 @@ function AuthProvider({ children }) {
     setData({});
   }
 
-  async function updateProfile({ user, avatarFile }) {
+  async function updatedProfile({ user, avatarFile }) {
     try {
       if (avatarFile) {
         const fileUploadForm = new FormData();
@@ -76,7 +76,7 @@ function AuthProvider({ children }) {
     <AuthContext.Provider value={{
       signIn,
       signOut,
-      updateProfile,
+      updatedProfile,
       user: data.user
     }}>
       {children}
